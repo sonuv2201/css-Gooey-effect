@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gooey Effect Using CSS Only</title>
+	<style>
+		.wrapper{
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+			filter: blur(10px) contrast(30);
+		}
+
+		.box-1{
+			width: 150px;
+			height: 150px;
+			border-radius: 100%;
+			position:absolute;
+			background-color: black;
+		}
+
+		.box-2{
+			width:50px;
+			height: 50px; 
+			background-color: black;
+			border-radius: 100%;
+			transition: 3.5s cubic-bezier(1, 1.76, 0, -0.24);
+		}
+
+		.wrapper:hover .box-2{
+			margin-left: -250px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box-1"></div>
+		<div class="box-2"></div>
+	</div>
+</body>
+</html>
